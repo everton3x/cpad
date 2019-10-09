@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cpad id="liquidac" linesize="709">
+    <field id="nr_empenho" type="string" start="1" size="13" transform=""></field>
+    <field id="nr_liquidac" type="string" start="14" size="20" transform=""></field>
+    <field id="dia" type="int" start="34" size="2" transform=""></field>
+    <field id="mes" type="int" start="36" size="2" transform=""></field>
+    <field id="ano" type="int" start="38" size="4" transform=""></field>
+    <field id="valor" type="float" start="42" size="14" transform="valor_com_sinal"></field>
+    <field id="operacao" type="string" start="221" size="30" transform=""></field>
+    <field id="historico" type="text" start="251" size="400" transform="trim"></field>
+    <field id="existe_contrato" type="string" start="651" size="1" transform=""></field>
+    <field id="nr_contrato_tce" type="int" start="652" size="20" transform=""></field>
+    <field id="nr_contrato" type="string" start="672" size="20" transform=""></field>
+    <field id="ano_contrato" type="int" start="692" size="4" transform=""></field>
+    <field id="existe_nf" type="string" start="696" size="1" transform=""></field>
+    <field id="nr_nf" type="int" start="697" size="9" transform=""></field>
+    <field id="serie_nf" type="string" start="706" size="3" transform=""></field>
+    <field id="tipo_contrato" type="string" start="709" size="1" transform=""></field>
+</cpad>

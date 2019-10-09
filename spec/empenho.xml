@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cpad id="empenho" linesize="725">
+    <field id="orgao" type="int" start="1" size="2" transform=""></field>
+    <field id="uniorcam" type="int" start="1" size="4" transform=""></field>
+    <field id="funcao" type="int" start="5" size="2" transform=""></field>
+    <field id="subfuncao" type="int" start="7" size="3" transform=""></field>
+    <field id="programa" type="int" start="10" size="4" transform=""></field>
+    <field id="projativ" type="int" start="17" size="5" transform=""></field>
+    <field id="ndo" type="string" start="22" size="15" transform="transpor_zeros_a_direita"></field>
+    <field id="ndo_f" type="string" start="22" size="15" transform="formata_ndo"></field>
+    <field id="rv" type="int" start="37" size="4" transform=""></field>
+    <field id="contrapartida" type="int" start="41" size="4" transform=""></field>
+    <field id="nr_empenho" type="string" start="45" size="13" transform=""></field>
+    <field id="dia" type="int" start="58" size="2" transform=""></field>
+    <field id="mes" type="int" start="60" size="2" transform=""></field>
+    <field id="ano" type="int" start="62" size="4" transform=""></field>
+    <field id="valor" type="float" start="66" size="14" transform="valor_com_sinal"></field>
+    <field id="credor" type="int" start="80" size="10" transform=""></field>
+    <field id="cp" type="int" start="255" size="3" transform=""></field>
+    <field id="reg_preco" type="string" start="260" size="1" transform=""></field>
+    <field id="nr_licitacao" type="int" start="281" size="20" transform=""></field>
+    <field id="ano_licitacao" type="int" start="301" size="4" transform=""></field>
+    <field id="historico" type="text" start="305" size="400" transform="trim"></field>
+    <field id="forma_contrat" type="string" start="705" size="3" transform=""></field>
+    <field id="base_legal" type="int" start="708" size="2" transform=""></field>
+    <field id="desp_func" type="string" start="710" size="1" transform=""></field>
+    <field id="licit_compart" type="string" start="711" size="1" transform=""></field>
+    <field id="cnpj_gerenciador" type="string" start="712" size="14" transform=""></field>
+</cpad>

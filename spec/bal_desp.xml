@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cpad id="bal_desp" linesize="213">
+    <field id="orgao" type="int" start="1" size="2" transform=""></field>
+    <field id="uniorcam" type="int" start="1" size="4" transform=""></field>
+    <field id="funcao" type="int" start="5" size="2" transform=""></field>
+    <field id="subfuncao" type="int" start="7" size="3" transform=""></field>
+    <field id="programa" type="int" start="10" size="4" transform=""></field>
+    <field id="projativ" type="int" start="17" size="5" transform=""></field>
+    <field id="elemento" type="string" start="22" size="6" transform="transpor_zeros_a_direita"></field>
+    <field id="elemento_f" type="string" start="22" size="6" transform="formata_elemento"></field>
+    <field id="rv" type="int" start="28" size="4" transform=""></field>
+    <field id="dot_inicial" type="float" start="32" size="13" transform="valor_sem_sinal"></field>
+    <field id="atualiz_monet" type="float" start="45" size="13" transform="valor_sem_sinal"></field>
+    <field id="cred_suplem" type="float" start="58" size="13" transform="valor_sem_sinal"></field>
+    <field id="cred_especial" type="float" start="71" size="13" transform="valor_sem_sinal"></field>
+    <field id="cred_extraord" type="float" start="84" size="13" transform="valor_sem_sinal"></field>
+    <field id="reducoes" type="float" start="97" size="13" transform="valor_sem_sinal"></field>
+    <field id="suplem_rv" type="float" start="110" size="13" transform="valor_sem_sinal"></field>
+    <field id="reduc_rv" type="float" start="123" size="13" transform="valor_sem_sinal"></field>
+    <field id="empenhado" type="float" start="136" size="13" transform="valor_sem_sinal"></field>
+    <field id="liquidado" type="float" start="149" size="13" transform="valor_sem_sinal"></field>
+    <field id="pago" type="float" start="162" size="13" transform="valor_sem_sinal"></field>
+    <field id="limitado" type="float" start="175" size="13" transform="valor_sem_sinal"></field>
+    <field id="recomposto" type="float" start="188" size="13" transform="valor_sem_sinal"></field>
+    <field id="prev_ate_termino" type="float" start="201" size="13" transform="valor_sem_sinal"></field>
+</cpad>

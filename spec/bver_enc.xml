@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cpad id="bver_enc" linesize="261">
+    <field id="conta_contabil" type="string" start="1" size="20" transform="transpor_zeros_a_direita"></field>
+    <field id="conta_contabil_f" type="string" start="1" size="20" transform="formata_conta_contabil"></field>
+    <field id="uniorcam" type="int" start="21" size="4" transform=""></field>
+    <field id="saldo_anterior_debito" type="float" start="25" size="13" transform="valor_sem_sinal"></field>
+    <field id="saldo_anterior_credito" type="float" start="38" size="13" transform="valor_sem_sinal"></field>
+    <field id="movimento_debito" type="float" start="51" size="13" transform="valor_sem_sinal"></field>
+    <field id="movimento_credito" type="float" start="64" size="13" transform="valor_sem_sinal"></field>
+    <field id="saldo_final_debito" type="float" start="77" size="13" transform="valor_sem_sinal"></field>
+    <field id="saldo_final_credito" type="float" start="90" size="13" transform="valor_sem_sinal"></field>
+    <field id="conta" type="string" start="103" size="148" transform="trim"></field>
+    <field id="tipo_nivel" type="string" start="251" size="1" transform=""></field>
+    <field id="nivel" type="int" start="252" size="2" transform=""></field>
+    <field id="escrituracao" type="string" start="255" size="1" transform=""></field>
+    <field id="nat_informacao" type="string" start="256" size="1" transform=""></field>
+    <field id="superavit_financ" type="string" start="257" size="1" transform=""></field>
+    <field id="rv" type="int" start="258" size="4" transform=""></field>
+</cpad>

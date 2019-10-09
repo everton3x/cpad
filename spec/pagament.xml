@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cpad id="pagament" linesize="673">
+    <field id="nr_empenho" type="string" start="1" size="13" transform=""></field>
+    <field id="nr_pagament" type="string" start="14" size="20" transform=""></field>
+    <field id="dia" type="int" start="34" size="2" transform=""></field>
+    <field id="mes" type="int" start="36" size="2" transform=""></field>
+    <field id="ano" type="int" start="38" size="4" transform=""></field>
+    <field id="valor" type="float" start="42" size="14" transform="valor_com_sinal"></field>
+    <field id="operacao" type="string" start="176" size="30" transform=""></field>
+    <field id="conta_debito" type="string" start="206" size="20" transform="transpor_zeros_a_direita"></field>
+    <field id="conta_debito_f" type="string" start="206" size="20" transform="formata_conta_contabil"></field>
+    <field id="uniorcam_debito" type="int" start="226" size="4" transform=""></field>
+    <field id="conta_credito" type="string" start="230" size="20" transform="transpor_zeros_a_direita"></field>
+    <field id="conta_credito_f" type="string" start="230" size="20" transform="formata_conta_contabil"></field>
+    <field id="uniorcam_credito" type="int" start="250" size="4" transform=""></field>
+    <field id="historico" type="text" start="254" size="400" transform="trim"></field>
+    <field id="nr_liquidac" type="string" start="654" size="20" transform=""></field>
+</cpad>

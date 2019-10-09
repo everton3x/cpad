@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cpad id="receita" linesize="259">
+    <field id="nro" type="string" start="1" size="20" transform="transpor_zeros_a_direita"></field>
+    <field id="nro_f" type="string" start="1" size="20" transform="formata_nro"></field>
+    <field id="uniorcam" type="int" start="21" size="4" transform=""></field>
+    <field id="janeiro" type="float" start="25" size="13" transform="valor_sem_sinal"></field>
+    <field id="fevereiro" type="float" start="38" size="13" transform="valor_sem_sinal"></field>
+    <field id="marco" type="float" start="51" size="13" transform="valor_sem_sinal"></field>
+    <field id="abril" type="float" start="64" size="13" transform="valor_sem_sinal"></field>
+    <field id="maio" type="float" start="77" size="13" transform="valor_sem_sinal"></field>
+    <field id="junho" type="float" start="90" size="13" transform="valor_sem_sinal"></field>
+    <field id="julho" type="float" start="103" size="13" transform="valor_sem_sinal"></field>
+    <field id="agosto" type="float" start="116" size="13" transform="valor_sem_sinal"></field>
+    <field id="setembro" type="float" start="129" size="13" transform="valor_sem_sinal"></field>
+    <field id="outubro" type="float" start="142" size="13" transform="valor_sem_sinal"></field>
+    <field id="novembro" type="float" start="155" size="13" transform="valor_sem_sinal"></field>
+    <field id="dezembro" type="float" start="168" size="13" transform="valor_sem_sinal"></field>
+    <field id="meta1bim" type="float" start="181" size="12" transform="valor_sem_sinal"></field>
+    <field id="meta2bim" type="float" start="193" size="12" transform="valor_sem_sinal"></field>
+    <field id="meta3bim" type="float" start="205" size="12" transform="valor_sem_sinal"></field>
+    <field id="meta4bim" type="float" start="217" size="12" transform="valor_sem_sinal"></field>
+    <field id="meta5bim" type="float" start="229" size="12" transform="valor_sem_sinal"></field>
+    <field id="meta6bim" type="float" start="241" size="12" transform="valor_sem_sinal"></field>
+    <field id="cp" type="int" start="253" size="3" transform=""></field>
+    <field id="rv" type="int" start="256" size="4" transform=""></field>
+    
+</cpad>

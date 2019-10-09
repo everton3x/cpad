@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cpad id="rd_extra" linesize="40">
+    <field id="conta_contabil" type="string" start="1" size="20" transform="transpor_zeros_a_direita"></field>
+    <field id="conta_contabil_f" type="string" start="1" size="20" transform="formata_conta_contabil"></field>
+    <field id="uniorcam" type="int" start="21" size="4" transform=""></field>
+    <field id="valor_mov" type="float" start="25" size="13" transform="valor_sem_sinal"></field>
+    <field id="identificador" type="string" start="38" size="1" transform=""></field>
+    <field id="classificacao" type="int" start="39" size="2" transform=""></field>
+</cpad>

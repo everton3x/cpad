@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cpad id="decreto" linesize="84">
+    <field id="nr_lei" type="string" start="1" size="20" transform="trim"></field>
+    <field id="dia_lei" type="int" start="21" size="2" transform=""></field>
+    <field id="mes_lei" type="int" start="23" size="2" transform=""></field>
+    <field id="ano_lei" type="int" start="25" size="4" transform=""></field>
+    <field id="nr_decreto" type="string" start="29" size="20" transform="trim"></field>
+    <field id="dia_decreto" type="int" start="49" size="2" transform=""></field>
+    <field id="mes_decreto" type="int" start="51" size="2" transform=""></field>
+    <field id="ano_decreto" type="int" start="53" size="4" transform=""></field>
+    <field id="valor_credito" type="float" start="57" size="13" transform="valor_sem_sinal"></field>
+    <field id="valor_reducao" type="float" start="70" size="13" transform="valor_sem_sinal"></field>
+    <field id="tipo_credito" type="int" start="83" size="1" transform=""></field>
+    <field id="origem_recurso" type="int" start="84" size="1" transform=""></field>
+</cpad>

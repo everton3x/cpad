@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cpad id="tce_4111" linesize="261">
+    <field id="conta_contabil" type="string" start="1" size="20" transform="transpor_zeros_a_direita"></field>
+    <field id="conta_contabil_f" type="string" start="1" size="20" transform="formata_conta_contabil"></field>
+    <field id="uniorcam" type="int" start="21" size="4" transform=""></field>
+    <field id="nr_lancamento" type="string" start="29" size="12" transform=""></field>
+    <field id="nr_lote" type="string" start="41" size="12" transform=""></field>
+    <field id="nr_documento" type="string" start="53" size="13" transform=""></field>
+    <field id="dia" type="int" start="66" size="2" transform=""></field>
+    <field id="mes" type="int" start="68" size="2" transform=""></field>
+    <field id="ano" type="int" start="70" size="4" transform=""></field>
+    <field id="valor" type="float" start="74" size="17" transform="valor_sem_sinal"></field>
+    <field id="tipo_lanc" type="string" start="91" size="1" transform=""></field>
+    <field id="nr_arquivamento" type="string" start="92" size="12" transform=""></field>
+    <field id="historico" type="text" start="104" size="150" transform="trim"></field>
+    <field id="tipo_documento" type="string" start="254" size="1" transform=""></field>
+    <field id="nat_informacao" type="string" start="255" size="1" transform=""></field>
+    <field id="superavit_financ" type="string" start="256" size="1" transform=""></field>
+    <field id="rv" type="int" start="257" size="4" transform=""></field>
+</cpad>
