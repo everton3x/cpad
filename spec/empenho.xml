@@ -26,4 +26,5 @@
     <field id="desp_func" type="string" start="710" size="1" transform=""></field>
     <field id="licit_compart" type="string" start="711" size="1" transform=""></field>
     <field id="cnpj_gerenciador" type="string" start="712" size="14" transform=""></field>
+    <field id="ano_empenho" type="int" start="45" size="5" transform=""></field>
 </cpad>
