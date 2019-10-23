@@ -5,7 +5,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 /**
  * Converte.
- * 
+ *
  * @param OutputInterface $console
  * @param array $ds Caminhos dos diretórios com os *.txt. Se houver mais que um, os dados serão agregados.
  * @param string $repo Caminho para o repositório que conterá o resultado da conversão.
@@ -33,7 +33,7 @@ function parse(OutputInterface $console, string $repo, array $ds): void {
     }
 
     ProgressBar::setFormatDefinition('custom', '<info>%message%</info> [%bar%] %percent:3s%% [%current% / %max%]');
-    
+
     /* pegando metadados */
     try {
         $index = 0;
@@ -121,6 +121,7 @@ function parse(OutputInterface $console, string $repo, array $ds): void {
             if (writer_prepare($writer, $txtName, $spec) === false) {
                 throw new Exception("Falha ao preparar o writer para receber $txtName");
             }
+
             /* processa cada linha */
             while (($buffer = fgets($handle)) !== false) {
                 if (strtoupper(substr($buffer, 0, 11)) === 'FINALIZADOR') {
@@ -159,7 +160,7 @@ function parse(OutputInterface $console, string $repo, array $ds): void {
 
 /**
  * Converte cada linha com campos em largura fixa num array.
- * 
+ *
  * @param string $data
  * @param SimpleXMLElement $cols
  * @return array
