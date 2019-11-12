@@ -17,7 +17,9 @@ function writer_create(string $path): string {
 				}
 			}
         }else{
-			mkdir($dirname, 0777, true);
+			$mkdir = mkdir($dirname, 0777, true);
+
+			// var_dump($mkdir);exit();
 		}
 
         return $dirname;

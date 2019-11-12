@@ -33,9 +33,9 @@ class ConvertCommand extends Command {
         $ds = $input->getArgument('input');
         
         foreach ($ds as $item){
-            $output->writeln("<info>Origem: $item</info>");
+            $output->writeln("<info>Origem: $item");
         }
-        $output->writeln("<info>Destino: $repo</info>");
+        $output->writeln("<info>Destino: $repo");
         
         try{
             parse($output, $repo, $ds);
