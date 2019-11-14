@@ -8,19 +8,17 @@
  */
 function writer_create(string $path): string {
     try {
-		$dirname = dirname($path).DIRECTORY_SEPARATOR.basename($path, '.csv').DIRECTORY_SEPARATOR;
+        $dirname = dirname($path) . DIRECTORY_SEPARATOR . basename($path, '.csv') . DIRECTORY_SEPARATOR;
 
         if (file_exists($dirname)) {
-            foreach(($directory = new DirectoryIterator($dirname)) as $item){
-				if($item->isFile()){
-					unlink($item->getPathname());
-				}
-			}
-        }else{
-			$mkdir = mkdir($dirname, 0777, true);
-
-			// var_dump($mkdir);exit();
-		}
+            foreach (($directory = new DirectoryIterator($dirname)) as $item) {
+                if ($item->isFile()) {
+                    unlink($item->getPathname());
+                }
+            }
+        } else {
+            mkdir($dirname, 0777, true);
+        }
 
         return $dirname;
     } catch (Exception $ex) {
@@ -41,18 +39,18 @@ function writer_prepare(string $writer, string $table, SimpleXMLElement $spec): 
         //print_r($spec);exit();
 
         /* monta o cabeçalho */
-		$header = [];
-		foreach($spec->field as $col){
-			$header[] = $col['id'];
-		}
+        $header = [];
+        foreach ($spec->field as $col) {
+            $header[] = $col['id'];
+        }
 
         /* cria o arquivo */
-		$fh = fopen("$writer$table.csv", 'a');
-		if(fputcsv($fh, $header, ';') === false){
-			throw new Exception("Não foi possível preparar o arquivo pra $table.");
-		}
+        $fh = fopen("$writer$table.csv", 'a');
+        if (fputcsv($fh, $header, ';') === false) {
+            throw new Exception("Não foi possível preparar o arquivo pra $table.");
+        }
 
-		fclose($fh);
+        fclose($fh);
 
         return true;
     } catch (Exception $ex) {
@@ -70,23 +68,27 @@ function writer_prepare(string $writer, string $table, SimpleXMLElement $spec): 
  */
 function writer_write(string $writer, string $table, array $data): bool {
     try {
-		static $fwriter = null;
+//        static $fwriter = null;
+        $fwriter = null;
 
-		if(is_null($fwriter)){
-			$fwriter = fopen("$writer$table.csv", 'a');
-		}
+        if (is_null($fwriter)) {
+            $fwriter = fopen("$writer$table.csv", 'a');
+        }
 
-		/* percorre todos os campos transformando float em string */
+        /* percorre todos os campos transformando float em string */
 
-		array_walk_recursive($data, function(&$item, $key){
-			if(is_float($item)){
-				$item = number_format($item, 2, ',', '.');
-			}
-		});
+        array_walk_recursive($data, function(&$item, $key) {
+            if (is_float($item)) {
+                $item = number_format($item, 2, ',', '.');
+            }
+        });
 
-		if(fputcsv($fwriter, $data, ';') === false){
-			throw new Exception("Não foi possível gravar os dados de $table.");
-		}
+//        print_r($data);
+        if (fputcsv($fwriter, $data, ';') === false) {
+            throw new Exception("Não foi possível gravar os dados de $table.");
+        }
+        
+        fclose($fwriter);
 
         return true;
     } catch (Exception $ex) {
@@ -102,7 +104,7 @@ function writer_write(string $writer, string $table, array $data): bool {
  */
 function writer_commit(string $writer, string $table): bool {
     try {
-		return true;
+        return true;
     } catch (Exception $ex) {
         throw $ex;
     }
@@ -129,33 +131,32 @@ function writer_save(string $writer): bool {
  */
 function writer_save_meta(string $writer, string $table, array $meta): bool {
     try {
-		//print_r($meta);exit();
-		$file = $writer.'meta.csv';
+        //print_r($meta);exit();
+        $file = $writer . 'meta.csv';
 
-		array_unshift($meta, $table);
+        array_unshift($meta, $table);
 
-		$header = [];
-		if(!file_exists($file)){
-			//array_unshift($meta, 'tabela', 'arquivo', 'cnpj', 'data_inicial', 'data_final', 'data_geracao', 'entidade', 'registros');
-			$header = ['tabela', 'arquivo', 'cnpj', 'data_inicial', 'data_final', 'data_geracao', 'entidade', 'registros'];
-		}
+        $header = [];
+        if (!file_exists($file)) {
+            //array_unshift($meta, 'tabela', 'arquivo', 'cnpj', 'data_inicial', 'data_final', 'data_geracao', 'entidade', 'registros');
+            $header = ['tabela', 'arquivo', 'cnpj', 'data_inicial', 'data_final', 'data_geracao', 'entidade', 'registros'];
+        }
 
-		$fh = fopen($file, 'a');
+        $fh = fopen($file, 'a');
 
-		if($header){
-			if(fputcsv($fh, $header, ';') === false){
-				throw new Exception("Não foi possível gravar o cabeçalho dos meta-dados.");
-			}
-		}
+        if ($header) {
+            if (fputcsv($fh, $header, ';') === false) {
+                throw new Exception("Não foi possível gravar o cabeçalho dos meta-dados.");
+            }
+        }
 
-		if(fputcsv($fh, $meta, ';') === false){
-			throw new Exception("Não foi possível gravar os meta-dados de $table");
-		}
+        if (fputcsv($fh, $meta, ';') === false) {
+            throw new Exception("Não foi possível gravar os meta-dados de $table");
+        }
 
         fclose($fh);
 
         return true;
-
     } catch (Exception $ex) {
         throw $ex;
     }

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cpad id="brub_ant" linesize="238">
+    <field id="orgao" type="int" start="1" size="2" transform=""></field>
+    <field id="uniorcam" type="int" start="1" size="4" transform=""></field>
+    <field id="funcao" type="int" start="5" size="2" transform=""></field>
+    <field id="subfuncao" type="int" start="7" size="3" transform=""></field>
+    <field id="programa" type="int" start="10" size="4" transform=""></field>
+    <field id="projativ" type="int" start="17" size="5" transform=""></field>
+    <field id="rubrica" type="string" start="22" size="15" transform="transpor_zeros_a_direita"></field>
+    <field id="rubrica_f" type="string" start="22" size="15" transform="formata_ndo"></field>
+    <field id="rv" type="int" start="37" size="4" transform=""></field>
+    <field id="empenhado_1bim" type="float" start="41" size="11" transform="valor_sem_sinal"></field>
+    <field id="empenhado_2bim" type="float" start="52" size="11" transform="valor_sem_sinal"></field>
+    <field id="empenhado_3bim" type="float" start="63" size="11" transform="valor_sem_sinal"></field>
+    <field id="empenhado_4bim" type="float" start="74" size="11" transform="valor_sem_sinal"></field>
+    <field id="empenhado_5bim" type="float" start="85" size="11" transform="valor_sem_sinal"></field>
+    <field id="empenhado_6bim" type="float" start="96" size="11" transform="valor_sem_sinal"></field>
+    <field id="liquidado_1bim" type="float" start="107" size="11" transform="valor_sem_sinal"></field>
+    <field id="liquidado_2bim" type="float" start="118" size="11" transform="valor_sem_sinal"></field>
+    <field id="liquidado_3bim" type="float" start="129" size="11" transform="valor_sem_sinal"></field>
+    <field id="liquidado_4bim" type="float" start="140" size="11" transform="valor_sem_sinal"></field>
+    <field id="liquidado_5bim" type="float" start="151" size="11" transform="valor_sem_sinal"></field>
+    <field id="liquidado_6bim" type="float" start="162" size="11" transform="valor_sem_sinal"></field>
+    <field id="pago_1bim" type="float" start="173" size="11" transform="valor_sem_sinal"></field>
+    <field id="pago_2bim" type="float" start="184" size="11" transform="valor_sem_sinal"></field>
+    <field id="pago_3bim" type="float" start="195" size="11" transform="valor_sem_sinal"></field>
+    <field id="pago_4bim" type="float" start="206" size="11" transform="valor_sem_sinal"></field>
+    <field id="pago_5bim" type="float" start="217" size="11" transform="valor_sem_sinal"></field>
+    <field id="pago_6bim" type="float" start="228" size="11" transform="valor_sem_sinal"></field>
+    
+</cpad>
